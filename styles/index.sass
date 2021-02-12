@@ -1,47 +1,43 @@
+/* styling vars */
+
 $primary-font-stack: 'Acumin Pro', sans-serif
 $secondary-font-stack: serif
 $primary-color: black
-$header-padding-y: 2.2em
-$header-padding-x: 1em
-$grid-line-size: 0.1em
-$content-margin: 0.1em
+$header-padding-y: 2.2rem
+$header-padding-x: 1rem
+$grid-line-size: 0.05rem
+$content-margin: 0.1rem
 $hover-transition-time: 0.25s
 
+/* font face declarations */
+@font-face 
+	font-family: 'Acumin Pro'
+	font-style: normal
+	font-weight: normal
+	src: local('Acumin Pro'), url('../../../res/fonts/Acumin-RPro.woff') format('woff')
 
 @font-face 
-    font-family: 'Acumin Pro'
-    font-style: normal
-    font-weight: normal
-    src: local('Acumin Pro'), url('../../../res/fonts/Acumin-RPro.woff') format('woff')
-    
-    
+	font-family: 'Acumin Pro Italic'
+	font-style: normal
+	font-weight: normal
+	src: local('Acumin Pro Italic'), url('../../../res/fonts/Acumin-ItPro.woff') format('woff')
 
 @font-face 
-    font-family: 'Acumin Pro Italic'
-    font-style: normal
-    font-weight: normal
-    src: local('Acumin Pro Italic'), url('../../../res/fonts/Acumin-ItPro.woff') format('woff')
-    
-    
-
+	font-family: 'Acumin Pro Bold'
+	font-style: normal
+	font-weight: normal
+	src: local('Acumin Pro Bold'), url('../../../res/fonts/Acumin-BdPro.woff') format('woff')
+       
 @font-face 
-    font-family: 'Acumin Pro Bold'
-    font-style: normal
-    font-weight: normal
-    src: local('Acumin Pro Bold'), url('../../../res/fonts/Acumin-BdPro.woff') format('woff')
-    
-    
-
-@font-face 
-    font-family: 'Acumin Pro Bold Italic';
-    font-style: normal
-    font-weight: normal
-    src: local('Acumin Pro Bold Italic'), url('../../../res/fonts/Acumin-BdItPro.woff') format('woff')
-
+	font-family: 'Acumin Pro Bold Italic'
+	font-style: normal
+	font-weight: normal
+	src: local('Acumin Pro Bold Italic'), url('../../../res/fonts/Acumin-BdItPro.woff') format('woff')
 
 html, body
 	margin: 0
-	
+	min-height: 100%
+	position: relative // for marquee scrolling
 	
 header
 	font: 100% $primary-font-stack
@@ -68,31 +64,31 @@ header
 	nav
 		margin-left: auto
 		text-align: right
+		z-index: 2
 
 		.dropdown-content
-			font-size: 0.75em
+			font-size: 0.75rem
 			text-align: center
 			display: none
 			padding-bottom: 1%
 
 		.hide
-			position: absolute; 
-			overflow: hidden; 
-			clip: rect(0 0 0 0); 
-			height: 1px; width: 1px; 
-			margin: -1px; padding: 0; border: 0; 
-
-			
+			position: absolute 
+			overflow: hidden
+			clip: rect(0 0 0 0)
+			height: 1px w
+			idth: 1px
+			margin: -1px 
+			padding: 0
+			border: 0
 		
 a
 	text-decoration: none
 	color: DarkGray
 	/*padding-left: 1% */
 	transition: color $hover-transition-time linear
-   	-webkit-transition: color $hover-transition-time linear
-   	-moz-transition: color $hover-transition-time linear
-			
-		
+	-webkit-transition: color $hover-transition-time linear
+	-moz-transition: color $hover-transition-time linear				
 			
 a:active
 	text-decoration: none
@@ -124,12 +120,12 @@ div.title
 
 div.subtitle
 	flex: 1
-	font-size: 0.75em
+	font-size: 0.75rem
 	margin-left: 5%
 
 footer
 	border-top: $primary-color solid $grid-line-size	
-	padding-bottom: 2.5em
+	padding-bottom: 2.5rem
 main
 	.flex-grid
 		display: flex
@@ -141,7 +137,7 @@ main
 			display: flex
 			flex: 1
 			justify-content: center
-			font-size: 0.75em
+			font-size: 0.75rem
 			
 			width: 25%
 			border-left: $primary-color solid $grid-line-size
@@ -155,7 +151,7 @@ main
 				margin: $content-margin
 
 				.linebreak
-					height: 0.1em
+					height: 0.1rem
 					width: 200%
 				
 				.centered-elem
@@ -219,6 +215,8 @@ main
 			padding-left: $grid-line-size
 			padding-right: $grid-line-size
 
+			position: relative // for interior vertical marquees
+
 
 			border-top: $primary-color solid $grid-line-size
 			border-bottom: $primary-color solid $grid-line-size
@@ -227,69 +225,68 @@ main
 			color: $primary-color
 
 			th
-				padding: 1em
+				padding: 1rem
 
 			h2
 				margin: 0
 			
 			table
-				margin: 5em
+				margin: 5rem
 			
-
-
-
 .img-wrapper
 	display: flex
 	flex-direction: column
 	z-index: 1
 	
-.img-wrapper > span
-	align-self: flex-end
-	width: 100%
-	text-align: center
+	span
+		align-self: flex-end
+		width: 100%
+		text-align: center
 	
-	
-
-
 marquee
 	/*position: absolute*/
-	font-size: 0.75em
+	font-size: 0.75rem
 	z-index: 2
 
 	p
 		margin: 0
 
 /* for vertical marquees to stretch across the screen */
-div#marquee-wrapper
-	position: relative
-	height: 100%
+.marquee-wrapper
+	position: absolute
+	top: 0
+	left: 50%
+	transform: translateX(-50%)
+	width: 100%
+	min-height: 100%
+	z-index: 1 // so navbar is clickable
 
-marquee.vertical
+.vertical
 	height: 100%
 	writing-mode: vertical-lr
 	text-orientation: upright
 	width: max-content
 
 	
-/* utility classes */
-.mt25
+/* utility classes - psuedo tailwind naming convention*/
+.mt-25
 	margin-top: 25%
 
-.mt50
+.mt-50
 	margin-top: 50%
 
-.p5
-	padding-top: 5em
+.pt-5
+	padding-top: 5rem
 
-.p10
-	padding-top: 10em
+.pt-10
+	padding-top: 10rem
 
-.p20
-	padding-top: 20em
+.pt-20
+	padding-top: 20rem
 
 	
-.p30
-	padding-top: 30em
+.pt-30
+	padding-top: 30rem
 
 .absolute
 	position: absolute
@@ -304,40 +301,35 @@ marquee.vertical
 	right: 24.5%
 
 .left-border-interior
-	left: 25.5%
+	left: 0
 
 .right-border-interior
-	right: 25.5%
+	right: 0
 
 .translate-height-up
 	transform: translateY(-100%)
 
-.fs100
+.fs-100
 	font-size: 100%
-
 .font-bold
 	font-weight: bold
 .font-normal
 	font-weight: normal
-
 .secondary-font-stack
 	font-family: $secondary-font-stack
-
-.text-align-left
+.ta-left
 	text-align: left
-.text-align-right
+.ta-right
 	text-align: right
-.text-align-center
+.ta-center
 	text-align: center
-
-.margin-bottom-4em
-	margin-bottom: 4em
-.margin-top-4em
-	margin-top: 4em
-
-.margin-left-auto
+.mb-4
+	margin-bottom: 4rem
+.mt-4
+	margin-top: 4rem
+.ml-auto
 	margin-left: auto
-.margin-right-auto
+.mr-auto
 	margin-right: auto
 .top
 	top: 0
