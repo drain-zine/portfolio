@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html prefix="og: https://ogp.me/ns#">
+    <head>
+        {% include "partials/head.njk" %}
+
+        <link rel="stylesheet" type="text/css" href="/styles/index.css" />
+
+        {% block headScript %}
+        {% endblock %}
+    
+    </head>
+
+    <body>
+        {% import "partials/header.njk" as header %}
+        {{header.header(_name)}}
+
+        {% block content %}
+        {% endblock %}
+
+        {% include "partials/footer.njk" %}
+
+    </body>
+</html>

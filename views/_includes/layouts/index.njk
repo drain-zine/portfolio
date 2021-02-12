@@ -1,0 +1,75 @@
+{% extends "layouts/root.njk" %}
+{% set _name = "home" %}
+
+{% block content %}
+<div id="marquee-wrapper">
+	<marquee behavior="scroll" direction="up" class="vertical top absolute right-border margin-left-auto">{{ scrollingText | safe }}</marquee>
+	<marquee behavior="scroll" direction="down" class="vertical top absolute left-border margin-left-auto">{{ scrollingText | safe }}</marquee>
+	
+	<main>
+
+		<!-- padding row -->
+		<div class="flex-grid padding">
+			<div class="col p20"><div class="sub-col-right">
+				
+			</div></div>
+			<div class="col p20"></div>
+			<div class="col p20"></div>
+			<div class="col p20 col-right"></div>
+		</div>
+				
+		<!-- row 1-->
+		<div class="flex-grid">
+			<marquee behavior="scroll" direction="left" class="absolute">{{ scrollingText | safe }}</marquee>
+			<div class="col">	
+				
+			</div>
+
+			<div class="col">
+				<div class="img-wrapper">
+					<img src="{{homeImage}}" width=200%/>
+				</div>	
+			</div>
+		
+			<div class="col img-overlap">
+			</div>
+
+			<div class="col wrap col-right">
+
+			</div>
+			
+		</div>
+		<div class="flex-grid">
+			
+			
+			<div class="col">
+				
+			</div>
+
+			<div class="col">
+			</div>
+		
+			<div class="col img-overlap">
+			</div>
+
+			<div class="col wrap col-right">
+
+			</div>
+			<marquee behavior="scroll" direction="right" class="absolute translate-height-up">{{ scrollingText | safe }}</marquee>
+
+		</div>
+
+
+		<!-- padding row -->
+		<div class="flex-grid padding">
+			<div class="col p20"></div>
+			<div class="col p20"></div>
+			<div class="col p20">
+				
+			</div>
+			<div class="col p20 col-right"></div>
+		</div>
+
+	</main>
+</div>
+{% endblock %}

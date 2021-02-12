@@ -1,0 +1,116 @@
+{% extends "layouts/root.njk" %}
+{% set _name="portfolio" %}
+
+{% block content %}
+	<main>
+				
+		<!-- row 1 -->
+		<div class="flex-grid">
+			<div class="col">
+				<div class="img-wrapper">
+					<img src="{{AVImage}}" width=200% style="transform: translate(-25%);"/>
+					<span>Figure 1: Avant Vibes Asset #006.</span>
+				</div>
+			</div>
+			<div class="col">
+				<div class="sub-col-left">
+					<div class="img-wrapper">
+						<img src="{{drainE1Image}}" width=100%/>
+						Figure 2: Avant Vibes host, Christian, encountering an avian friend on the street.
+					</div>
+				
+				</div>
+				<div class="sub-col-right">
+					{% block AvantVibes %}
+					{% endblock %}
+				
+					<div class="centered-elem mt25">
+						<p><a href="https://www.drainzine.fr/AVANT_VIBES/index.html">LINK</a></p>
+						<p><a href="Moodboards/AvantVibes.html">MOODBOARD</a></p>
+					</div>
+				
+				</div>
+			</div>
+			
+			<div class="col"></div>
+			<div class="col col-right"></div>
+		</div>
+
+		<!--row 2 -->
+		<div class="flex-grid">
+			
+			<div class="col"></div>
+			<div class="col">
+				<div class="sub-col-left"></div>
+				<div class="sub-col-right">
+					{% block DrainE1 %}
+					{% endblock %}
+				</div>
+			</div>
+			<div class="col">
+				<div class="sub-col-left">
+					<div class="img-wrapper">
+						<img src="{{drainE1Image}}" width=100%/>
+						Figure 3: Photo Collage Submission "Bird" for Drain Zine.
+					</div>
+				
+				</div>
+				<div class="sub-col-right">
+					<div class="centered-elem mt50">
+						<p><a href="https://www.drainzine.fr/">LINK</a></p>
+						<p><a href="Moodboards/DrainE1.html">MOODBOARD</a></p>
+					</div>
+				</div>
+				
+			</div>
+			<div class="col col-right"></div>
+		</div>
+
+		<!-- padding row -->
+		<div class="flex-grid padding">
+			<div class="col p20"></div>
+			<div class="col p20"></div>
+			<div class="col p20"></div>
+			<div class="col p20 col-right"></div>
+		</div>
+
+		<!-- row 3 -->
+		<div class="flex-grid">
+			<div class="col"></div>
+			<div class="col"></div>
+			<div class="col">
+				<div class="img-wrapper"  style="transform: translateY(-3%);">
+					<img src="{{drainE2Image}}" width=100% />
+					<span>Figure 4: DRAIN Edition 2, Overworld Asset #03 "The Ye Olde Fountain".</span>
+				</div>
+			</div>
+			<div class="col col-right">
+				
+				<div class="sub-col-left">
+					{% block DrainE2 %}
+					{% endblock %}
+					
+					<div class="centered-elem mt25">
+						<p><a href="https://www.drainzine.fr/AVANT_VIBES/index.html">LINK</a></p>
+						<p><a href="Moodboards/AvantVibes/AvantVibes.html">MOODBOARD</a></p>
+					</div>
+					
+				</div>
+				
+				<div class="sub-col-right">
+				
+				</div>
+			</div>
+		</div>
+
+		<!-- padding row -->
+		<div class="flex-grid padding">
+			<div class="col p20"></div>
+			<div class="col p20"></div>
+			<div class="col p20"></div>
+			<div class="col p20 col-right"></div>
+		</div>
+
+	</main>
+
+{% endblock %}

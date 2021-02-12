@@ -1,0 +1,21 @@
+{
+  "name": "PORTFOLIO11ty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "markdown-it": "^12.0.4",
+    "markdown-it-anchor": "^7.0.2",
+    "markdown-it-attrs": "^4.0.0",
+    "markdown-it-bracketed-spans": "^1.0.1",
+    "outdent": "^0.8.0",
+    "sass": "^1.32.6"
+  }
+}

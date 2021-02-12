@@ -1,0 +1,346 @@
+$primary-font-stack: 'Acumin Pro', sans-serif
+$secondary-font-stack: serif
+$primary-color: black
+$header-padding-y: 2.2em
+$header-padding-x: 1em
+$grid-line-size: 0.1em
+$content-margin: 0.1em
+$hover-transition-time: 0.25s
+
+
+@font-face 
+    font-family: 'Acumin Pro'
+    font-style: normal
+    font-weight: normal
+    src: local('Acumin Pro'), url('../../../res/fonts/Acumin-RPro.woff') format('woff')
+    
+    
+
+@font-face 
+    font-family: 'Acumin Pro Italic'
+    font-style: normal
+    font-weight: normal
+    src: local('Acumin Pro Italic'), url('../../../res/fonts/Acumin-ItPro.woff') format('woff')
+    
+    
+
+@font-face 
+    font-family: 'Acumin Pro Bold'
+    font-style: normal
+    font-weight: normal
+    src: local('Acumin Pro Bold'), url('../../../res/fonts/Acumin-BdPro.woff') format('woff')
+    
+    
+
+@font-face 
+    font-family: 'Acumin Pro Bold Italic';
+    font-style: normal
+    font-weight: normal
+    src: local('Acumin Pro Bold Italic'), url('../../../res/fonts/Acumin-BdItPro.woff') format('woff')
+
+
+html, body
+	margin: 0
+	
+	
+header
+	font: 100% $primary-font-stack
+	color: $primary-color
+	
+	display: flex
+	justify-content: space-between
+	border-bottom: $primary-color solid $grid-line-size
+	
+	padding-top: $header-padding-y
+	padding-left: $header-padding-x
+	padding-right: $header-padding-x
+	padding-bottom: $header-padding-y
+	
+	.headerWrapper
+		display: flex
+		/*justify-content: space-between*/
+		width: 100%
+	
+	h2
+		margin-top: 0
+		font: $primary-font-stack
+		
+	nav
+		margin-left: auto
+		text-align: right
+
+		.dropdown-content
+			font-size: 0.75em
+			text-align: center
+			display: none
+			padding-bottom: 1%
+
+		.hide
+			position: absolute; 
+			overflow: hidden; 
+			clip: rect(0 0 0 0); 
+			height: 1px; width: 1px; 
+			margin: -1px; padding: 0; border: 0; 
+
+			
+		
+a
+	text-decoration: none
+	color: DarkGray
+	/*padding-left: 1% */
+	transition: color $hover-transition-time linear
+   	-webkit-transition: color $hover-transition-time linear
+   	-moz-transition: color $hover-transition-time linear
+			
+		
+			
+a:active
+	text-decoration: none
+	color: DarkRed
+	/*padding-left: 1% */
+
+a:visited
+	text-decoration: none
+	color: DarkGray
+
+a:hover
+	text-decoration: none
+	color: red
+	/*padding-left: 1% */
+
+a.active
+	color: red
+
+		
+div.title
+	float: left
+	/*width: 5%*/
+
+	h2 > p
+		margin: 0
+		padding: 0
+		margin-bottom: $content-margin
+
+
+div.subtitle
+	flex: 1
+	font-size: 0.75em
+	margin-left: 5%
+
+footer
+	border-top: $primary-color solid $grid-line-size	
+	padding-bottom: 2.5em
+main
+	.flex-grid
+		display: flex
+		padding-left: $header-padding-x
+		padding-right: $header-padding-x
+		z-index: 0
+		
+		.col
+			display: flex
+			flex: 1
+			justify-content: center
+			font-size: 0.75em
+			
+			width: 25%
+			border-left: $primary-color solid $grid-line-size
+
+			
+			.sub-col-left, .sub-col-right
+				display: flex
+				flex-direction: column
+				align-items: flex-start
+				width: 50%
+				margin: $content-margin
+
+				.linebreak
+					height: 0.1em
+					width: 200%
+				
+				.centered-elem
+					width: 100%
+					text-align: center
+			
+		.col-span
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			margin: $content-margin
+			width: 50%
+
+		.left
+			margin-right: auto
+		.right
+			margin-left: auto
+
+		.hug-border-right
+			text-align: right
+		.hug-border-left
+			text-align: left	
+	.wrap
+		flex-wrap: wrap
+					
+	p
+		margin-top: 0
+	
+	.col-right
+		border-right: $primary-color solid $grid-line-size
+		
+	.pos-end
+		margin-top: auto
+
+		
+	.paragraph-low-half
+		margin-top: 100%
+
+	.double
+		width: 50%
+		flex-direction: column
+		align-items: center
+
+	.flex-grid-three
+		display: flex
+		padding-left: $header-padding-x
+		padding-right: $header-padding-x
+		z-index: 0
+
+		.col
+			display: flex
+			width: 25%
+			border-left: $primary-color solid $grid-line-size
+			border-right: $primary-color solid $grid-line-size
+
+		.col-center
+			width: 50%
+			display: flex
+			flex-direction: column
+			align-items: center
+			padding-left: $grid-line-size
+			padding-right: $grid-line-size
+
+
+			border-top: $primary-color solid $grid-line-size
+			border-bottom: $primary-color solid $grid-line-size
+
+			font: 100% $primary-font-stack
+			color: $primary-color
+
+			th
+				padding: 1em
+
+			h2
+				margin: 0
+			
+			table
+				margin: 5em
+			
+
+
+
+.img-wrapper
+	display: flex
+	flex-direction: column
+	z-index: 1
+	
+.img-wrapper > span
+	align-self: flex-end
+	width: 100%
+	text-align: center
+	
+	
+
+
+marquee
+	/*position: absolute*/
+	font-size: 0.75em
+	z-index: 2
+
+	p
+		margin: 0
+
+/* for vertical marquees to stretch across the screen */
+div#marquee-wrapper
+	position: relative
+	height: 100%
+
+marquee.vertical
+	height: 100%
+	writing-mode: vertical-lr
+	text-orientation: upright
+	width: max-content
+
+	
+/* utility classes */
+.mt25
+	margin-top: 25%
+
+.mt50
+	margin-top: 50%
+
+.p5
+	padding-top: 5em
+
+.p10
+	padding-top: 10em
+
+.p20
+	padding-top: 20em
+
+	
+.p30
+	padding-top: 30em
+
+.absolute
+	position: absolute
+
+.relative
+	position: relative
+
+.left-border
+	left: 24.5%
+
+.right-border
+	right: 24.5%
+
+.left-border-interior
+	left: 25.5%
+
+.right-border-interior
+	right: 25.5%
+
+.translate-height-up
+	transform: translateY(-100%)
+
+.fs100
+	font-size: 100%
+
+.font-bold
+	font-weight: bold
+.font-normal
+	font-weight: normal
+
+.secondary-font-stack
+	font-family: $secondary-font-stack
+
+.text-align-left
+	text-align: left
+.text-align-right
+	text-align: right
+.text-align-center
+	text-align: center
+
+.margin-bottom-4em
+	margin-bottom: 4em
+.margin-top-4em
+	margin-top: 4em
+
+.margin-left-auto
+	margin-left: auto
+.margin-right-auto
+	margin-right: auto
+.top
+	top: 0
+.bottom
+	bottom: 0
+

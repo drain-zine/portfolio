@@ -1,0 +1,86 @@
+{% extends "layouts/root.njk" %}
+{% set _name = "contact" %}
+
+{% block content %}
+<div id="marquee-wrapper">
+	<marquee behavior="scroll" direction="up" class="vertical absolute right-border">{{ mContent | safe }}</marquee>
+	<marquee behavior="scroll" direction="down" class="vertical absolute left-border">{{ mContent | safe }}</marquee>
+	
+	<main>
+
+		<!-- padding row -->
+		<div class="flex-grid padding">
+			<div class="col p20"><div class="sub-col-right">
+				
+			</div></div>
+			<div class="col p20"></div>
+			<div class="col p20"></div>
+			<div class="col p20 col-right"></div>
+		</div>
+				
+		<!-- row 1-->
+		<div class="flex-grid-three">
+			
+			<div class="col">	
+				
+			</div>
+
+			<div class="col-center">
+				<marquee behavior="scroll" direction="right" class="margin-bottom-4em">Test</marquee>
+				<marquee behavior="scroll" direction="up" class="vertical absolute right-border-interior">Test</marquee>
+				<marquee behavior="scroll" direction="down" class="vertical absolute left-border-interior">Test</marquee>
+				<h2>Information</h2>
+                <table>
+                    <tr>
+                        <th class="font-bold text-align-left">Email</th>
+                        <th class="font-normal secondary-font-stack">tomstannett@gmail.com</th>
+                    </tr>
+                    <tr>
+                        <th class="font-bold text-align-left">Mobile</th>
+                        <th class="font-normal secondary-font-stack">(+44) 7596700788</th>
+                    </tr>
+                </table>
+
+                <a href="/res/files/TomStannettCV.pdf">Curriculum Vitae</a>
+				<marquee behavior="scroll" direction="left" class="margin-top-4em">Test</marquee>
+			</div>
+
+			<div class="col">
+
+			</div>
+			
+		</div>
+		<div class="flex-grid">
+			
+			
+			<div class="col">
+				
+			</div>
+
+			<div class="col">
+			</div>
+		
+			<div class="col img-overlap">
+			</div>
+
+			<div class="col wrap col-right">
+
+			</div>
+			<marquee behavior="scroll" direction="right" class="absolute translate-height-up">{{ mContent | safe }}</marquee>
+
+		</div>
+
+
+		<!-- padding row -->
+		<div class="flex-grid padding">
+			<div class="col p20"></div>
+			<div class="col p20"></div>
+			<div class="col p20">
+				
+			</div>
+			<div class="col p20 col-right"></div>
+		</div>
+
+	</main>
+</div>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% macro header(name) %}
+<header>
+		<div class="headerWrapper">
+			<div class="title"><h2><p>Tom</p><p>Stannett</p></h2></div>
+			<div class="subtitle">Web Design, Frontend Web Development. Esoteric design, minimalist ethos.</div>
+
+			
+			<nav>
+			
+				<a class="{% if name == "home" %}active{% endif %}"  href="/index.html">HOME</a>
+				<a class="dropdown {% if name == "portfolio" or name == "AvantVibes" or name == "DrainE1" %}active{% endif %}" href="/portfolio.html">PORTFOLIO</a>
+				<a class="{% if name == "contact" %}active{% endif %}"href="/contact.html">CONTACT</a>
+			
+
+				<div class="dropdown-content">
+					<a class="{% if name == "AvantVibes" %}active{% endif %}" href="/Moodboards/AvantVibes.html">AVANT VIBES</a>
+					<a class="{% if name == "DrainE1" %}active{% endif %}" href="/Moodboards/DrainE1.html">DRAIN E1</a>
+					<a class="{% if name == "DrainE2" %}active{% endif %}" href="Moodboards/drain_e2.html">DRAIN E2</a>
+				</div>
+			</nav>
+
+		</div>
+</header>
+
+<script>
+	if($("a").is(".dropdown.active")){
+		$("div.dropdown-content").show();
+	}
+
+	else{ 
+		$("a.dropdown").on({
+			mouseenter: function () {
+				$("div.dropdown-content").show();
+			},
+			mouseleave: function () {
+					$("div.dropdown-content").on({
+					mouseenter: function () {
+						$("div.dropdown-content").show();
+						$("a.dropdown").addClass("active");
+					},
+					mouseleave: function () {
+						$("div.dropdown-content").hide();
+						$("a.dropdown").removeClass("active");
+					}
+				});
+			}
+		}); 
+	}
+</script>
+{% endmacro %}
