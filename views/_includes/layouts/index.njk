@@ -2,20 +2,20 @@
 {% set _name = "home" %}
 
 {% block content %}
-<div id="marquee-wrapper">
-	<marquee behavior="scroll" direction="up" class="vertical top absolute right-border margin-left-auto">{{ scrollingText | safe }}</marquee>
-	<marquee behavior="scroll" direction="down" class="vertical top absolute left-border margin-left-auto">{{ scrollingText | safe }}</marquee>
-	
+<div class="marquee-wrapper">
+	<marquee behavior="scroll" direction="up" class="vertical top absolute right-border ml-auto">{{ scrollingText | safe }}</marquee>
+	<marquee behavior="scroll" direction="down" class="vertical top absolute left-border ml-auto">{{ scrollingText | safe }}</marquee>
+</div>	
 	<main>
 
 		<!-- padding row -->
 		<div class="flex-grid padding">
-			<div class="col p20"><div class="sub-col-right">
+			<div class="col pt-20"><div class="sub-col-right">
 				
 			</div></div>
-			<div class="col p20"></div>
-			<div class="col p20"></div>
-			<div class="col p20 col-right"></div>
+			<div class="col pt-20"></div>
+			<div class="col pt-20"></div>
+			<div class="col pt-20 col-right"></div>
 		</div>
 				
 		<!-- row 1-->
@@ -62,14 +62,14 @@
 
 		<!-- padding row -->
 		<div class="flex-grid padding">
-			<div class="col p20"></div>
-			<div class="col p20"></div>
-			<div class="col p20">
+			<div class="col pt-20"></div>
+			<div class="col pt-20"></div>
+			<div class="col pt-20">
 				
 			</div>
-			<div class="col p20 col-right"></div>
+			<div class="col pt-20 col-right"></div>
 		</div>
 
 	</main>
-</div>
+
 {% endblock %}
