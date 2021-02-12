@@ -4,7 +4,7 @@ const sass = require("./utils/sass")
 
 
 module.exports = function (eleventyConfig) {
-    resLocations = ["res"]
+    resLocations = ["res", "styles"]
 
     // Allow custom markdown parser, switchfrom default engine (liquid) to njk
     eleventyConfig.setLibrary('md', markdown)

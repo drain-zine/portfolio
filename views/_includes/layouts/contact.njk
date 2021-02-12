@@ -2,10 +2,7 @@
 {% set _name = "contact" %}
 
 {% block content %}
-<div class="marquee-wrapper">
-	<marquee behavior="scroll" direction="up" class="vertical absolute right-border">{{ mContent | safe }}</marquee>
-	<marquee behavior="scroll" direction="down" class="vertical absolute left-border">{{ mContent | safe }}</marquee>
-	
+
 	<main>
 
 		<!-- padding row -->
@@ -27,8 +24,10 @@
 
 			<div class="col-center">
 				<marquee behavior="scroll" direction="right" class="mb-4">Test</marquee>
-				<marquee behavior="scroll" direction="up" class="vertical absolute right-border-interior">Test</marquee>
-				<marquee behavior="scroll" direction="down" class="vertical absolute left-border-interior">Test</marquee>
+				
+				<marquee behavior="scroll" direction="up" class="vertical absolute right-border-interior">Tets</marquee>
+				<marquee behavior="scroll" direction="down" class="vertical absolute left-border-interior">TEst</marquee>
+				
 				<h2>Information</h2>
                 <table>
                     <tr>
@@ -82,5 +81,4 @@
 		</div>
 
 	</main>
-</div>
 {% endblock %}

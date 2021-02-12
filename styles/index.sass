@@ -215,6 +215,8 @@ main
 			padding-left: $grid-line-size
 			padding-right: $grid-line-size
 
+			position: relative // for interior vertical marquees
+
 
 			border-top: $primary-color solid $grid-line-size
 			border-bottom: $primary-color solid $grid-line-size
@@ -259,11 +261,11 @@ marquee
 	min-height: 100%
 	z-index: 1 // so navbar is clickable
 
-	.vertical
-		height: 100%
-		writing-mode: vertical-lr
-		text-orientation: upright
-		width: max-content
+.vertical
+	height: 100%
+	writing-mode: vertical-lr
+	text-orientation: upright
+	width: max-content
 
 	
 /* utility classes - psuedo tailwind naming convention*/
@@ -299,10 +301,10 @@ marquee
 	right: 24.5%
 
 .left-border-interior
-	left: 25.5%
+	left: 0
 
 .right-border-interior
-	right: 25.5%
+	right: 0
 
 .translate-height-up
 	transform: translateY(-100%)
