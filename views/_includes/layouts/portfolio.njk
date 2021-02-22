@@ -6,16 +6,16 @@
 				
 		<!-- row 1 -->
 		<div class="flex-grid">
-			<div class="col">
+			<div class="col justify-center">
 				<div class="img-wrapper">
 					<img src="{{AVImage}}" width=200% style="transform: translate(-25%);"/>
-					<span>Figure 1: Avant Vibes Asset #006.</span>
+					<p class="self-center">Figure 1: Avant Vibes Asset #006.</p>
 				</div>
 			</div>
 			<div class="col">
 				<div class="sub-col-left">
 					<div class="img-wrapper">
-						<img src="{{drainE1Image}}" width=100%/>
+						<img src="{{AVImage2}}" width=100%/>
 						Figure 2: Avant Vibes host, Christian, encountering an avian friend on the street.
 					</div>
 				
@@ -36,14 +36,25 @@
 			<div class="col col-right"></div>
 		</div>
 
+		<!-- padding row -->
+		<div class="flex-grid padding">
+			<div class="col pt-10"></div>
+			<div class="col pt-10"></div>
+			<div class="col pt-10"></div>
+			<div class="col pt-10 col-right"></div>
+		</div>
+
 		<!--row 2 -->
 		<div class="flex-grid">
 			
 			<div class="col"></div>
 			<div class="col">
-				<div class="sub-col-left"></div>
+				<div class="sub-col-left">
+					{% block DrainE11 %}
+					{% endblock %}
+				</div>
 				<div class="sub-col-right">
-					{% block DrainE1 %}
+					{% block DrainE12 %}
 					{% endblock %}
 				</div>
 			</div>
@@ -68,10 +79,10 @@
 
 		<!-- padding row -->
 		<div class="flex-grid padding">
-			<div class="col pt-20"></div>
-			<div class="col pt-20"></div>
-			<div class="col pt-20"></div>
-			<div class="col pt-20 col-right"></div>
+			<div class="col pt-10"></div>
+			<div class="col pt-10"></div>
+			<div class="col pt-10"></div>
+			<div class="col pt-10 col-right"></div>
 		</div>
 
 		<!-- row 3 -->
