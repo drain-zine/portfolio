@@ -136,7 +136,7 @@ main
 		.col
 			display: flex
 			flex: 1
-			justify-content: center
+			/*justify-content: center*/
 			font-size: 0.75rem
 			
 			width: 25%
@@ -156,8 +156,7 @@ main
 				
 				.centered-elem
 					width: 100%
-					text-align: center
-			
+					text-align: center			
 		.col-span
 			display: flex
 			flex-direction: column
@@ -182,6 +181,7 @@ main
 	
 	.col-right
 		border-right: $primary-color solid $grid-line-size
+		
 		
 	.pos-end
 		margin-top: auto
@@ -235,9 +235,13 @@ main
 			
 .img-wrapper
 	display: flex
-	flex-direction: column
 	z-index: 1
-	
+	flex-direction: column
+	align-items: flex-start
+	margin-right: -0.05rem /* cancel out margin from adjacent col's border */
+.img-overlap
+	z-index: 0
+
 	span
 		align-self: flex-end
 		width: 100%
@@ -277,17 +281,18 @@ marquee
 
 .mt-5
 	margin-top: 5rem
-
+.pt-1
+	padding-top: 1rem
 .pt-5
 	padding-top: 5rem
-
+.pr-01
+	padding-right: 0.1rem
 .pt-10
 	padding-top: 10rem
 
 .pt-20
 	padding-top: 20rem
 
-	
 .pt-30
 	padding-top: 30rem
 
@@ -338,4 +343,27 @@ marquee
 	top: 0
 .bottom
 	bottom: 0
+.justify-start
+	justify-content: flex-start
+.flex-col
+	flex-direction: column
+.items-center
+	align-items: center
+.border-top
+	border-top: $primary-color solid $grid-line-size
+.border-bottom
+	border-bottom: $primary-color solid $grid-line-size
+.border-right
+	border-right: $primary-color solid $grid-line-size
+.border-left
+	border-left: $primary-color solid $grid-line-size
+.border-left-none
+	border-left: none !important
+.z-0
+	z-index: 0
+.z-1
+	z-index: 1
+.z-2
+	z-index: 2
+
 
