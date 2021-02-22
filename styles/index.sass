@@ -212,8 +212,8 @@ main
 			display: flex
 			flex-direction: column
 			align-items: center
-			padding-left: $grid-line-size
-			padding-right: $grid-line-size
+			margin-left: -$grid-line-size
+			padding-right: calc(2*#{$grid-line-size})
 
 			position: relative // for interior vertical marquees
 
@@ -378,6 +378,9 @@ marquee
 	font-size: 0.85rem
 .translateX-50
 	transform: translateX(50%)
-
+.w-100
+	width: 100%
+.h-50
+	height: 50%
 
 
