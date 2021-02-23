@@ -273,83 +273,87 @@ marquee
 
 	
 /* utility classes - psuedo tailwind naming convention*/
-.mt-1
-	margin-top: 1rem
-
-.mt-2
-	margin-top: 2rem
-
-.mt-5
-	margin-top: 5rem
-.mb-05
-	margin-bottom: 0.5rem
+/* PADDING */
+/* top */
 .pt-1
 	padding-top: 1rem
 .pt-5
 	padding-top: 5rem
-.pr-01
-	padding-right: 0.1rem
 .pt-10
 	padding-top: 10rem
-
 .pt-20
 	padding-top: 20rem
-
 .pt-30
 	padding-top: 30rem
+/* bottom */
+/* left */
+/* right */
+.pr-01
+	padding-right: 0.1rem
 
+/* MARGIN */
+/* top */
+.mt-1
+	margin-top: 1rem
+.mt-2
+	margin-top: 2rem
+.mt-4
+	margin-top: 4rem
+.mt-5
+	margin-top: 5rem
+/* bottom */
+.mb-05
+	margin-bottom: 0.5rem
+.mb-1
+	margin-bottom: 1rem
+.mb-4
+	margin-bottom: 4rem
+/* left */
+.ml-01
+	margin-left: 0.1rem
+/* right */
+.mr-01
+	margin-right: 0.1rem
+
+/* POSITIONING */
 .absolute
 	position: absolute
-
 .relative
 	position: relative
+.ml-auto
+	margin-left: auto
+.mr-auto
+	margin-right: auto
 
+/* abs rules */
+.top
+	top: 0
+.bottom
+	bottom: 0
 .left-border
 	left: 24.5%
-
 .right-border
 	right: 24.5%
-
 .left-border-interior
 	left: 0
-
 .right-border-interior
 	right: 0
 
+/* self transforms */
+.translateX-50
+	transform: translateX(50%)
 .translate-height-up
 	transform: translateY(-100%)
-.ml-01
-	margin-left: 0.1rem
-.mr-01
-	margin-right: 0.1rem
-.fs-100
-	font-size: 100%
-.font-bold
-	font-weight: bold
-.font-normal
-	font-weight: normal
-.secondary-font-stack
-	font-family: $secondary-font-stack
+
+/* text positioning */
 .ta-left
 	text-align: left
 .ta-right
 	text-align: right
 .ta-center
 	text-align: center
-.mb-1
-	margin-bottom: 1rem
-.mb-4
-	margin-bottom: 4rem
-.mt-4
-	margin-top: 4rem
-.ml-auto
-	margin-left: auto
-.mr-auto
-	margin-right: auto
-.top
-	top: 0
-.bottom
-	bottom: 0
+
+/* flex position */
 .justify-start
 	justify-content: flex-start
 .justify-center
@@ -360,6 +364,14 @@ marquee
 	flex-direction: column
 .items-center
 	align-items: center
+
+/* SIZING */
+.w-100
+	width: 100%
+.h-50
+	height: 50%
+
+/* BORDERS */
 .border-top
 	border-top: $primary-color solid $grid-line-size
 .border-bottom
@@ -372,22 +384,41 @@ marquee
 	border-left: none !important
 .border-transparent
 	border-color: transparent !important
+
+/* Z-INDEX */
 .z-0
 	z-index: 0
 .z-1
 	z-index: 1
 .z-2
 	z-index: 2
+
+/* FONT */
+/* size */
 .fs-085
 	font-size: 0.85rem
 .fs-09
 	font-size: 0.9rem
-.translateX-50
-	transform: translateX(50%)
-.w-100
-	width: 100%
-.h-50
-	height: 50%
+.fs-100
+	font-size: 100%
+
+/* weight */	
+.font-bold
+	font-weight: bold
+.font-normal
+	font-weight: normal
+
+/* stacks */
+.primary-font-stack
+	font-family: $primary-font-stack
+.secondary-font-stack
+	font-family: $secondary-font-stack
+
+/* MARQUEE REPLACEMENT FOR WC3 COMPAT */
+
+
+
+
 
 
 
